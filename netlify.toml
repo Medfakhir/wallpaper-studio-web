@@ -1,12 +1,25 @@
 [build]
-  # Build command for Flutter web
-  command = "flutter build web --release"
+  # Build command for Flutter web - installs Flutter first, then builds
+  command = """
+    # Install Flutter
+    git clone https://github.com/flutter/flutter.git -b stable --depth 1 /opt/flutter
+    export PATH="$PATH:/opt/flutter/bin"
+    
+    # Verify Flutter installation
+    flutter --version
+    
+    # Get dependencies
+    flutter pub get
+    
+    # Build for web
+    flutter build web --release
+  """
   # Directory to publish (the built files)
   publish = "build/web"
 
 [build.environment]
-  # Flutter version (adjust if needed)
-  FLUTTER_VERSION = "stable"
+  # Disable Flutter analytics
+  FLUTTER_ANALYTICS = "false"
 
 # Redirect all requests to index.html for Flutter routing
 [[redirects]]
