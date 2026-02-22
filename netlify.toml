@@ -1,0 +1,33 @@
+[build]
+  # Build command for Flutter web
+  command = "flutter build web --release"
+  # Directory to publish (the built files)
+  publish = "build/web"
+
+[build.environment]
+  # Flutter version (adjust if needed)
+  FLUTTER_VERSION = "stable"
+
+# Redirect all requests to index.html for Flutter routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for better performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

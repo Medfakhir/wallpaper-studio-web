@@ -209,3 +209,145 @@ This is a companion app to the mobile wallpaper app. Changes to shared code (mod
 
 **Built with Flutter Web for 100% mobile compatibility** 🎨
 # wallpaper-studio-web
+
+A Flutter web application for creating and editing depth wallpapers with customizable clocks, effects, and transforms.
+
+## Features
+
+- 🎨 Visual wallpaper editor with real-time preview
+- ⏰ Customizable clock with multiple fonts and styles
+- ✨ Effects: Shadow, Stroke, Inner/Outer Glow
+- 🔄 Transforms: Stretch, Skew, Perspective rotations
+- 📅 Optional date display
+- 💾 Export wallpaper configurations as JSON
+- 🖼️ Support for background and foreground layers
+
+## Live Demo
+
+Visit: [Your Netlify URL will be here]
+
+## Deployment
+
+### Netlify (Recommended)
+
+1. **Connect GitHub Repository**
+   - Go to [Netlify](https://app.netlify.com/)
+   - Click "Add new site" → "Import an existing project"
+   - Choose GitHub and select this repository
+
+2. **Configure Build Settings**
+   - Build command: `flutter build web --release`
+   - Publish directory: `build/web`
+   - (These are already configured in `netlify.toml`)
+
+3. **Deploy**
+   - Click "Deploy site"
+   - Netlify will automatically build and deploy
+
+### Manual Deployment
+
+```bash
+# Build the web app
+flutter build web --release
+
+# The built files are in build/web/
+# Upload these files to any static hosting service
+```
+
+## Local Development
+
+### Prerequisites
+
+- Flutter SDK (3.0 or higher)
+- Dart SDK
+- Web browser
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/Medfakhir/wallpaper-studio-web.git
+cd wallpaper-studio-web
+
+# Get dependencies
+flutter pub get
+
+# Run in development mode
+flutter run -d chrome
+```
+
+### Build for Production
+
+```bash
+flutter build web --release
+```
+
+## Usage
+
+1. **Upload Images**
+   - Click "Upload Background" to add a background image
+   - Click "Upload Foreground" (optional) for depth effect
+
+2. **Customize Clock**
+   - Adjust position, size, font, and color
+   - Apply effects like shadow, stroke, and glows
+   - Add transforms for unique styles
+
+3. **Export**
+   - Click "Export JSON" to download the configuration
+   - Use this JSON in your mobile app
+
+## Project Structure
+
+```
+wallpaper_studio_web/
+├── lib/
+│   ├── main.dart                 # App entry point
+│   ├── models/
+│   │   └── wallpaper_model.dart  # Data models
+│   ├── screens/
+│   │   └── editor_screen.dart    # Main editor UI
+│   └── widgets/
+│       └── wallpaper_painter.dart # Canvas rendering
+├── web/
+│   ├── index.html                # HTML template
+│   └── icons/                    # App icons
+├── netlify.toml                  # Netlify configuration
+└── pubspec.yaml                  # Dependencies
+
+```
+
+## Technologies
+
+- **Flutter Web** - UI framework
+- **Google Fonts** - Typography
+- **File Picker** - Image uploads
+- **Custom Painter** - Canvas rendering
+
+## Browser Support
+
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Support
+
+For issues and questions, please open an issue on GitHub.
+
+---
+
+Built with ❤️ using Flutter
+
