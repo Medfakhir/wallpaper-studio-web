@@ -1,0 +1,69 @@
+{
+  "id": "wall_test_complete",
+  "category": "Custom",
+  "assets": {
+    "background": "https://i.imghippo.com/files/xxxxx.jpg",
+    "foreground": "https://i.imghippo.com/files/yyyyy.png"
+  },
+  "clock": {
+    "enabled": true,
+    "format": "HH:mm",
+    "font": "BebasNeue",
+    "color": "#FFFFFF",
+    "opacity": 1.0,
+    "sizeRatio": 0.23,
+    "position": {
+      "x": 0.08,
+      "y": 0.55
+    },
+    "lineHeight": 0.9,
+    "letterSpacing": 0.05,
+    "splitDigits": false,
+    "verticalLayout": false,
+    "horizontalLayout": false,
+    "transform": {
+      "horizontalStretch": 1.2,
+      "verticalStretch": 0.9,
+      "horizontalSkew": 0.1,
+      "verticalSkew": -0.05,
+      "perspectiveX": 15.0,
+      "perspectiveY": -10.0,
+      "perspectiveZ": 5.0
+    },
+    "effects": {
+      "innerGlow": true,
+      "outerGlow": true
+    },
+    "style": {
+      "strokeWidth": 2,
+      "strokeColor": "#000000",
+      "shadowBlur": 15,
+      "shadowColor": "#000000",
+      "shadowOffsetX": 3,
+      "shadowOffsetY": 3,
+      "gradient": {
+        "enabled": true,
+        "colors": ["#FF0080", "#7928CA"],
+        "angle": 45
+      }
+    }
+  },
+  "date": {
+    "enabled": true,
+    "format": "EEEE, MMMM d",
+    "size": 0.03,
+    "position": {
+      "x": 0.5,
+      "y": 0.15
+    }
+  },
+  "depth": {
+    "layerOrder": ["background", "clock", "foreground"],
+    "parallax": {
+      "background": 6,
+      "clock": 4,
+      "foreground": 2
+    }
+  },
+  "version": "1.0"
+}
